@@ -24,7 +24,7 @@
             <label for="titulo" class="col-12 col-form-label">{{ __('posts.titulo') }}</label>
             <div class="col-12">
                 <input type="text" class="form-control" id="titulo" name="titulo"
-                    placeholder="{{ __('posts.titulo_ingresar') }}" value="{{ old('titulo') }}">
+                    placeholder="{{ __('posts.titulo_ingresar') }}" value="{{ old('titulo') }}" required>
                 @error('titulo')
                     <small class="text-danger">*{{ "$message" }}</small>
                 @enderror
@@ -46,7 +46,7 @@
             <label for="contenido" class="col-12 col-form-label">{{ __('posts.contenido') }}</label>
             <div class="col-12">
                 <textarea class="form-control" id="contenido" name="contenido" rows="6"
-                    placeholder="{{ __('posts.contenido_ingresar') }}">{{ old('contenido') }}</textarea>
+                    placeholder="{{ __('posts.contenido_ingresar') }}" required>{{ old('contenido') }}</textarea>
                 @error('contenido')
                     <small class="text-danger">*{{ $message }}</small>
                 @enderror
@@ -56,7 +56,7 @@
         <div class="form-group row">
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="comentable" name="comentable" value="1"
+                    <input class="form-check-input" type="checkbox" id="comentable" name="comentable" required value="1"
                         {{ old('comentable') ? 'checked' : '' }}>
                     <label class="form-check-label" for="comentable">
                         @lang('posts.comentable')
@@ -71,7 +71,7 @@
         <div class="form-group row">
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="caducable" name="caducable" value="1"
+                    <input class="form-check-input" type="checkbox" id="caducable" name="caducable" required value="1"
                         {{ old('caducable') ? 'checked' : '' }}>
                     <label class="form-check-label" for="caducable">
                         @lang('posts.caducable')
@@ -85,7 +85,7 @@
 
         <div class="form-group">
             <label for="acceso">{{ __('acceso') }}</label>
-            <select class="form-control" id="acceso" name="acceso">
+            <select class="form-control" id="acceso" name="acceso" required>
 
                 <option value="privado" {{ old('acceso') == 'privado' ? 'selected' : '' }}>
                     {{ __('privado') }}
@@ -105,7 +105,7 @@
             <label for="fec_publicacion" class="col-sm-2 col-form-label">@lang('fec_publicacion')</label>
             <div class="col-sm-10">
                 <input type="date" class="form-control" id="fec_publicacion" name="fec_publicacion"
-                    value="{{ old('fec_publicacion') }}" placeholder="@lang('fec_publicacion')">
+                    value="{{ old('fec_publicacion') }}" placeholder="@lang('fec_publicacion')" required>
                 @error('fec_publicacion')
                     <small class="text-danger">*{{ $message }}</small>
                 @enderror

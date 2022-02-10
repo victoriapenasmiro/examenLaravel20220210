@@ -16,7 +16,7 @@ class CreatePostTable extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->id();
             $table->string('titulo', 85);
-            $table->text('extracto');
+            $table->text('extracto')->nullable();
             $table->text('contenido');
             $table->boolean('caducable')->default(0);
             $table->boolean('comentable')->default(0);
