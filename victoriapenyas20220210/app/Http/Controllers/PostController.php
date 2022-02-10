@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePost;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -26,7 +27,7 @@ class PostController extends Controller
     public function create($lang)
     {
         $this->authorize('check-language', $lang);
-        
+
         return view('posts.create', compact('lang'));
     }
 
@@ -36,9 +37,9 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePost $request, $lang)
     {
-        //
+        //$post = new Centro($request->all());
     }
 
     /**
