@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePost;
 use App\Models\Post;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -42,11 +43,11 @@ class PostController extends Controller
     public function store(StorePost $request, $lang)
     {
         $post = new Post($request->all());
-        
+
         $post->user_id = Auth::id();
         $post->save();
 
-        return "insertado";
+        return redirect()->to(RouteServiceProvider::HOME)->with('exito', 'Post registrado correctamente');
     }
 
     /**

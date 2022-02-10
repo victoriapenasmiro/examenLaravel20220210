@@ -16,8 +16,8 @@
 
     <h1 class="mb-5 text-center">{{ __('posts.crear') }}</h1>
 
-        {{-- warning de errores de validacion del formulario --}}
-        @if ($errors->any())
+    {{-- warning de errores de validacion del formulario --}}
+    @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -26,6 +26,14 @@
             </ul>
         </div>
     @endif
+
+    @if (session('exito'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ session('exito') }}
+        </div>
+    @endif
+
 
     <form action="{{ route('posts.store', $lang) }}" method="POST">
 
