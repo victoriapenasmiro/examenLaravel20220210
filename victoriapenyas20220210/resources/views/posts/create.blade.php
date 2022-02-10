@@ -114,11 +114,11 @@
         </div>
 
         <div class="form-group row">
-            <label for="fec_publicacion" class="col-sm-2 col-form-label">@lang('fec_publicacion')</label>
+            <label for="fecha_publicacion" class="col-sm-2 col-form-label">@lang('fec_publicacion')</label>
             <div class="col-sm-10">
-                <input type="date" class="form-control" id="fec_publicacion" name="fec_publicacion"
-                    value="{{ old('fec_publicacion') }}" placeholder="@lang('fec_publicacion')" required>
-                @error('fec_publicacion')
+                <input type="date" class="form-control" id="fecha_publicacion" name="fecha_publicacion"
+                    value="{{ old('fecha_publicacion') }}" placeholder="@lang('fec_publicacion')" required>
+                @error('fecha_publicacion')
                     <small class="text-danger">*{{ $message }}</small>
                 @enderror
             </div>

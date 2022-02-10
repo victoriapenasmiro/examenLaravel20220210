@@ -30,7 +30,7 @@ class StorePost extends FormRequest
             'comentable' => 'required',
             'caducable' => 'required',
             'acceso' => 'required|string|max:15',
-            'fec_publicacion' => 'required|date',
+            'fecha_publicacion' => 'required|date',
         ];
     }
 }
