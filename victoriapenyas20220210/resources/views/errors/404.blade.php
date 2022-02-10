@@ -32,7 +32,7 @@
                     Sorry, an error has occured, Requested page not found!
                 </div>
                 <div class="error-actions">
-                    <a href="{{ route('centros.index', Request::route('lang') === 'es' || Request::route('lang') === 'en' ? Request::route('lang') : 'es') }}" class="btn btn-primary text-decoration-none">Volver al listado</a>
+                    <a href="{{ route('posts.index', Request::route('lang') === 'es' || Request::route('lang') === 'en' ? Request::route('lang') : 'es') }}" class="btn btn-primary text-decoration-none">Volver al listado</a>
                 </div>
             </div>
         </div>
