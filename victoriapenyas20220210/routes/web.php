@@ -22,7 +22,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // Para acceder a esta ruta es necesario estar autenticado
 Route::resource('{lang}/posts', PostController::class)->middleware('auth');
+
+Route::fallback(function () {
+    Abort(403);
+});
