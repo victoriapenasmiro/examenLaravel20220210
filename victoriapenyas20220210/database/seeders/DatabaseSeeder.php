@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -26,5 +27,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Examen2022'),
             'remember_token' => Str::random(10),
         ]);
+
+        Post::factory(2)->create();
     }
 }
