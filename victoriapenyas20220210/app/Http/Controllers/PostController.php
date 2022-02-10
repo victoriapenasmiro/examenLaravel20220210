@@ -13,6 +13,8 @@ class PostController extends Controller
      */
     public function index($lang)
     {
+        $this->authorize('check-language', $lang);
+
         return redirect()->route('posts.create', compact('lang'));
     }
 
@@ -23,6 +25,8 @@ class PostController extends Controller
      */
     public function create($lang)
     {
+        $this->authorize('check-language', $lang);
+        
         return view('posts.create', compact('lang'));
     }
 

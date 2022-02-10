@@ -178,5 +178,10 @@
     "You may accept this invitation by clicking the button below:": "Puede aceptar esta invitación haciendo clic en el botón de abajo:",
     "You may delete any of your existing tokens if they are no longer needed.": "Puede eliminar cualquiera de sus tokens existentes si ya no los necesita.",
     "You may not delete your personal team.": "No se puede borrar su equipo personal.",
-    "You may not leave a team that you created.": "No se puede abandonar un equipo que usted creó."
+    "You may not leave a team that you created.": "No se puede abandonar un equipo que usted creó.",
+    "acceso":"Acceso",
+    "privado":"Privado",
+    "publico":"Publico",
+    "fec_publicacion": "Fecha Publicación",
+    "crear": "Crear"
 }
