@@ -11,9 +11,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($lang)
     {
-        //
+        return redirect()->route('posts.create', compact('lang'));
     }
 
     /**
@@ -21,9 +21,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($lang)
     {
-        //
+        return view('posts.create', compact('lang'));
     }
 
     /**

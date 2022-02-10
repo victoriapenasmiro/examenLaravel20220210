@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,4 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 // Para acceder a esta ruta es necesario estar autenticado
-Route::resource('{lang}/posts', PostController::class)->middleware('auth');
+Route::resource('{lang}/posts', PostController::class);//->middleware('auth');
