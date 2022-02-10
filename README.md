@@ -16,7 +16,7 @@ El acceso a la base de datos se puede recuperar desde el .env del proyecto.
 
 ## 🚀 Despliegue
 
-El proyecto se ha desplegado en el servidor del centro, dentro de la ruta */var/www/ifc33b/mpenas/* [Ver aplicacion](http://mpenas.ifc33b.cifpfbmoll.eu/examenLaravel20220210/victoriapenyas20220210/public/es/posts).
+El proyecto se ha desplegado en el servidor del centro, dentro de la ruta */var/www/ifc33b/mpenas/examenLaravel20220210/victoriapenyas20220210* [Ver aplicacion](http://mpenas.ifc33b.cifpfbmoll.eu/examenLaravel20220210/victoriapenyas20220210/public/es/posts).
 
 ## Aspectos generales
 
