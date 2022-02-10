@@ -14,7 +14,19 @@
 
 @section('content')
 
-    <h1>{{ __('posts.crear') }}</h1>
+    <h1 class="mb-5 text-center">{{ __('posts.crear') }}</h1>
+
+        {{-- warning de errores de validacion del formulario --}}
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('posts.store', $lang) }}" method="POST">
 
         {{-- genero token para poder enviar el formulario. Directoiva obligatoria en Laravel --}}
