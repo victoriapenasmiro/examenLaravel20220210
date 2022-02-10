@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePost;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -39,7 +41,12 @@ class PostController extends Controller
      */
     public function store(StorePost $request, $lang)
     {
-        //$post = new Centro($request->all());
+        $post = new Post($request->all());
+        
+        $post->user_id = Auth::id();
+        $post->save();
+
+        return "insertado";
     }
 
     /**

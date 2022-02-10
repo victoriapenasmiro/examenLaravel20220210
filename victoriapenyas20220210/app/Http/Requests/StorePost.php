@@ -26,7 +26,7 @@ class StorePost extends FormRequest
         return [
             'titulo' => 'required|string|max:85',
             'extracto' => 'nullable|alpha_num',
-            'contenido' => 'required|string|alpha_num',
+            'contenido' => 'required|string',
             'comentable' => 'required',
             'caducable' => 'required',
             'acceso' => 'required|string|max:15',
